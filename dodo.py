@@ -1,3 +1,6 @@
+import inspect
+import os
+
 class Dodo:
     instance_count = 0
     instanced_once = False
@@ -17,3 +20,5 @@ class Dodo:
         if cls.__name__ in globals():
             print(f"Deleting class {cls.__name__}")
             del globals()[cls.__name__]
+            filepath = inspect.getfile(cls)
+            os.remove(filepath)
