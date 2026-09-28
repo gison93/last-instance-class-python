@@ -15,4 +15,4 @@ It's pretty poetic, but I am sure if you are here you noticed a specific sentenc
 
 _The last instance of a thing takes the class with it._
 
-The moment after I read it I thougt: "Is it possible to build in Python a class that satisfy this requirement?"
+The moment after I read it I thougth: "Is it possible to build in Python a class that satisfy this requirement?"
