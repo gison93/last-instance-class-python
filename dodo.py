@@ -1,5 +1,7 @@
+import importlib
 import inspect
 import os
+
 
 class Dodo:
     instance_count = 0
@@ -20,5 +22,12 @@ class Dodo:
         if cls.__name__ in globals():
             print(f"Deleting class {cls.__name__}")
             del globals()[cls.__name__]
+
             filepath = inspect.getfile(cls)
             os.remove(filepath)
+
+            pyc_filepath = importlib.util.cache_from_source(filepath)
+            
+            if os.path.exists(pyc_filepath):
+                os.remove(pyc_filepath)
+            
